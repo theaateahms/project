@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
 import { SignUpForm } from './SignUpForm';
 import { LoginForm } from './LoginForm';
@@ -11,7 +11,10 @@ interface AuthModalProps {
 
 export function AuthModal({ isOpen, onClose, initialMode = 'login' }: AuthModalProps) {
   const [mode, setMode] = React.useState(initialMode);
-
+  useEffect(() => {
+    setMode(initialMode);
+  }, [initialMode]);
+  
   if (!isOpen) return null;
 
   return (
