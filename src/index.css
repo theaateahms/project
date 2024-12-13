@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FAFAFA] text-gray-900;
+  }
+  
+  input {
+    @apply text-base leading-normal;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#7047EB] hover:bg-[#5F3DC4] text-white font-semibold px-6 py-2.5 rounded-xl transition-all duration-200 shadow-[0_4px_12px_rgba(112,71,235,0.25)] hover:shadow-[0_6px_16px_rgba(112,71,235,0.35)] transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200;
+  }
+
+  .input-primary {
+    @apply block w-full rounded-xl border-gray-200 shadow-sm focus:border-[#7047EB] focus:ring-[#7047EB] py-2.5;
+  }
+
+  .card-hover {
+    @apply transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .dropdown-shadow {
+    @apply shadow-[0_4px_20px_rgba(0,0,0,0.08)];
+  }
+}
